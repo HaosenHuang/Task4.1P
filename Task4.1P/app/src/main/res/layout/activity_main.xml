@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Chronometer
+        android:id="@+id/timer"
+        android:layout_width="302dp"
+        android:layout_height="128dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.323" />
+
+    <ImageButton
+        android:id="@+id/pause"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/stop"
+        app:layout_constraintTop_toBottomOf="@+id/timer"
+        app:srcCompat="@drawable/pause" />
+
+    <ImageButton
+        android:id="@+id/start"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="264dp"
+        android:onClick="start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/timer"
+        app:srcCompat="@drawable/start" />
+
+    <ImageButton
+        android:id="@+id/stop"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/timer"
+        app:srcCompat="@drawable/stop" />
+
+    <TextView
+        android:id="@+id/showtask"
+        android:layout_width="314dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="68dp"
+        android:gravity="center|left"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="157dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginBottom="90dp"
+        android:gravity="center|right"
+        android:text="Enter your task:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/task"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pause"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/task"
+        android:layout_width="187dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="90dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/pause"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
